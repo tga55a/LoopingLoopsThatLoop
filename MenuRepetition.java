@@ -1,5 +1,8 @@
+package Looping;
 
 import java.util.Scanner;
+import java.time.LocalDate;
+
 public class MenuRepetition {
 
     public static void main(String[] args) {
@@ -14,18 +17,20 @@ public class MenuRepetition {
             System.out.println(input);
             System.out.print("RESULT: ");
             if (input == 1) {
-                    System.out.println("HELLO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                    System.out.println("Hello!");
             } else if(input == 2) {
-                    System.out.println("It is currently September 17th in the Year 3025 in the Common Era");
+                LocalDate currentTime = LocalDate.now();
+                System.out.println(currentTime);
+
             } else if (input == 3) {
                 System.out.println("EXITED.");
                 cycling = false;
                 break;
             }
-
+            scanner.nextLine();
+            scanner.nextLine();
+    
             System.out.println("\n");
         } while(cycling);
-
     }
-
 }
